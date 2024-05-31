@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <title>Rayhan Baig - Portfolio</title>
+    </head>
+    <body>
+        
+        <nav class="navbar">
+            <ul class="navmenu">
+                <li>
+                    <a href="#aboutme" class="navbarlinks">About Me</a>
+                </li>
+                <li>
+                    <a href="#skills" class="navbarlinks">Skills</a>
+                </li>
+                <li>
+                    <a href="https://github.com/Rayhan2525" target="_blank" class="navbarlinks">Projects</a>
+                </li>
+                <li>
+                    <a href="uploads/RayhanBaig_Resume.pdf" download="RayhanBaig_Resume" target="_blank" class="navbarlinks">Resume</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <picture class="mainphoto">
+            <img src="images/rayhanbaigphoto.jpg">
+        </picture>
+
+        <article class="maindata">
+            <h1 class="nameheading">RAYHAN BAIG</h1>
+            <!-- <h3>Welcome to the creative space of</h3> -->
+            <p class="mainshortpara">
+                Welcome to my creative space,<br> where innovation meets excellence!
+                <!-- With a passion for cybersecurity, I defend critical systems, innovate resilient 
+                strategies, and stay ahead of cyber threats to protect your digital world. -->
+            </p>
+            <h3>
+                <span id="typewriter"></span>
+                <span id="cursor">|</span>
+            </h3>
+        </article>
+    
+        <article class="aboutme" id="aboutme">
+            <h1>About Me</h1>
+            <p class="aboutmepara">As a cybersecurity expert with a Bachelors of Science in Cybersecurity from Rochester Institute of Technology, 
+                I bring a robust blend of academic excellence and hands-on experience. Graduating Magna Cum Laude with a CGPA of 
+                3.72/4.00, I honed my technical prowess in diverse areas such as penetration testing, network security, and software 
+                development. My internships at Wegmans Food Markets and Neutral Fuels LLC provided practical insights into managing complex 
+                IT infrastructures, automating data processes, and enhancing cybersecurity measures. Proficient in a range of hacking tools 
+                and programming languages, I have actively participated in various cybersecurity competitions and projects, showcasing my 
+                ability to tackle real-world security challenges. Passionate about safeguarding digital landscapes, I am dedicated to innovating 
+                and implementing effective security solutions to protect against evolving cyber threats.</p>
+        </article>
+
+        <section class="skills" id="skills">
+            <h1>Skills</h1>
+        </section>
+        
+        <div class="grid">
+
+            <div class="skill-cardeven">
+                <h3>Penetration Testing</h3>
+                <ul>
+                    <li>Red Team Operations</li>
+                    <li>Network Scanning</li>
+                    <li>Metasploit</li>
+                    <li>Password Cracking</li>
+                    <li>Active Directory Enumeration</li>
+                    <li>Web Application Security</li>
+                    <li>Pentest Report Writing</li>
+                </ul>
+            </div>
+
+            <div class="skill-cardodd">
+                <h3>Tools and Technologies</h3>
+                <ul>
+                    <li>Wireshark</li>
+                    <li>Hydra and Patator</li>
+                    <li>Nmap</li>
+                    <li>Metasploit</li>
+                    <li>Burp Suite</li>
+                    <li>Microsoft Azure AD</li>
+                    <li>Ansible</li>
+                </ul>
+            </div>
+
+            <div class="skill-cardeven">
+                <h3>Network Security</h3>
+                <ul>
+                    <li>Firewall Configuration</li>
+                    <li>Network Troubleshooting</li>
+                    <li>Network Monitoring</li>
+                </ul>
+            </div>
+
+            <div class="skill-cardodd">
+                <h3>Software Development and Automation</h3>
+                <ul>
+                    <li>Python Programming</li>
+                    <li>App Development</li>
+                    <li>Web Development</li>
+                </ul>
+            </div>
+        
+        </div>
+        
+        <footer class="footer">
+            <ul class="connect">
+                <li><a href="https://www.linkedin.com/in/rayhan-baig/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/Rayhan2525" target="_blank">GitHub</a></li>
+            </ul>
+        </footer>
+
+        <!-- <script>
+            // Remove the hash from the URL on page load
+            window.addEventListener('load', function() {
+                if (window.location.hash) {
+                    window.history.replaceState(null, null, window.location.pathname);
+                    window.scrollTo(0, 0);
+                }
+            });
+    
+            // Add smooth scroll to the links
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script> -->
+
+        <script>
+            function sleep(ms) {
+                return new Promise((resolve) => setTimeout(resolve, ms));
+            }
+
+            const phrases = ['Ethical Hacker','Penetration Tester', 'Network Admin'];
+            const element = document.getElementById("typewriter");
+
+            let sleepTime = 100;
+
+            let curPhraseIndex = 0;
+
+            const typeloop = async () => {
+                while (true){
+                    let curWord = phrases[curPhraseIndex];
+                    // console.log(curWord);
+                    for (let i=0; i<curWord.length; i++) {
+                        element.innerText = curWord.substring(0, i+1);
+                        await sleep(sleepTime);
+                    }
+
+                    await sleep(1000);
+                
+                    for (let i=curWord.length; i>0; i--) {
+                        element.innerText = curWord.substring(0, i-1);
+                        await sleep(sleepTime);
+                    }
+
+                    await sleep(sleepTime*5);
+
+                    if(curPhraseIndex === phrases.length - 1) {
+                        curPhraseIndex = 0;
+                    }
+                    else {
+                        curPhraseIndex++;
+                    }
+                }
+            }
+
+            typeloop();
+        </script>
+    </body>
+</html>
