@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,133 +12,129 @@
         <title>Rayhan Baig - Portfolio</title>
     </head>
     <body>
-        
-        <nav class="navbar">
-            <ul class="navmenu">
-                <li>
-                    <a href="#aboutme" class="navbarlinks">About Me</a>
-                </li>
-                <li>
-                    <a href="#skills" class="navbarlinks">Skills</a>
-                </li>
-                <li>
-                    <a href="https://github.com/Rayhan2525" target="_blank" class="navbarlinks">Projects</a>
-                </li>
-                <li>
-                    <a href="uploads/RayhanBaig_Resume.pdf" download="RayhanBaig_Resume" target="_blank" class="navbarlinks">Resume</a>
-                </li>
-            </ul>
-        </nav>
-        
-        <picture class="mainphoto">
-            <img src="images/rayhanbaigphoto.jpg">
-        </picture>
+        <div class="container">
 
-        <article class="maindata">
-            <h1 class="nameheading">RAYHAN BAIG</h1>
-            <!-- <h3>Welcome to the creative space of</h3> -->
-            <p class="mainshortpara">
-                Welcome to my creative space,<br> where innovation meets excellence!
-                <!-- With a passion for cybersecurity, I defend critical systems, innovate resilient 
-                strategies, and stay ahead of cyber threats to protect your digital world. -->
-            </p>
-            <h3>
-                <span id="typewriter"></span>
-                <span id="cursor">|</span>
-            </h3>
-        </article>
-    
-        <article class="aboutme" id="aboutme">
-            <h1>About Me</h1>
-            <p class="aboutmepara">As a cybersecurity expert with a Bachelors of Science in Cybersecurity from Rochester Institute of Technology, 
-                I bring a robust blend of academic excellence and hands-on experience. Graduating Magna Cum Laude with a CGPA of 
-                3.72/4.00, I honed my technical prowess in diverse areas such as penetration testing, network security, and software 
-                development. My internships at Wegmans Food Markets and Neutral Fuels LLC provided practical insights into managing complex 
-                IT infrastructures, automating data processes, and enhancing cybersecurity measures. Proficient in a range of hacking tools 
-                and programming languages, I have actively participated in various cybersecurity competitions and projects, showcasing my 
-                ability to tackle real-world security challenges. Passionate about safeguarding digital landscapes, I am dedicated to innovating 
-                and implementing effective security solutions to protect against evolving cyber threats.</p>
-        </article>
-
-        <section class="skills" id="skills">
-            <h1>Skills</h1>
-        </section>
-        
-        <div class="grid">
-
-            <div class="skill-cardeven">
-                <h3>Penetration Testing</h3>
-                <ul>
-                    <li>Red Team Operations</li>
-                    <li>Network Scanning</li>
-                    <li>Metasploit</li>
-                    <li>Password Cracking</li>
-                    <li>Active Directory Enumeration</li>
-                    <li>Web Application Security</li>
-                    <li>Pentest Report Writing</li>
-                </ul>
+            <div class="section" id="main">
+                <!-- Navigation -->
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#aboutme" class="navbarLinks">About Me</a></li>
+                        <li><a href="#skills" class="navbarLinks">Skills</a></li>
+                        <li><a href="https://github.com/Rayhan2525" target="_blank" class="navbarLinks">Projects</a></li>
+                        <li><a href="uploads/RayhanBaig_Resume.pdf" download="RayhanBaig_Resume" target="_blank" class="navbarLinks">Resume</a></li>
+                        <li><a href="https://www.linkedin.com/in/rayhan-baig/" target="_blank" class="navbarLinks">Connect</a></li>
+                    </ul>
+                </nav>
+                <!-- Main header info -->
+                <header>
+                    <div class="mainName">
+                        <h1>RAYHAN<br>BAIG</h1>
+                    </div>
+                    <div class="movingTextContainer">
+                        <h3 class="movingtext">
+                            <span id="typewriter"></span>
+                            <span id="cursor">|</span>
+                        </h3>
+                    </div>
+                    <div class="introContainer">
+                        <p class="intropara">Welcome to my creative space, <br> where innovation meets excellence!</p>
+                    </div>
+                </header>
             </div>
 
-            <div class="skill-cardodd">
-                <h3>Tools and Technologies</h3>
-                <ul>
-                    <li>Wireshark</li>
-                    <li>Hydra and Patator</li>
-                    <li>Nmap</li>
-                    <li>Metasploit</li>
-                    <li>Burp Suite</li>
-                    <li>Microsoft Azure AD</li>
-                    <li>Ansible</li>
-                </ul>
-            </div>
+            <!-- Information about me -->
+            <div class="section" id="mainAboutme">
+                <div class="aboutme" id="aboutme">
+                    <h1>About Me</h1>
+                    <p class="aboutmepara">As a cybersecurity expert with a Bachelors of Science in Cybersecurity from Rochester Institute of Technology, 
+                        I bring a robust blend of academic excellence and hands-on experience. Graduating Magna Cum Laude with a CGPA of 
+                        3.72/4.00, I honed my technical prowess in diverse areas such as penetration testing, network security, and programming. My internships at Wegmans Food Markets and Neutral Fuels LLC provided practical insights into managing complex 
+                        IT infrastructures, automating data processes, and enhancing cybersecurity measures. Proficient in a range of hacking tools 
+                        and programming languages, I have actively participated in various cybersecurity competitions and projects, showcasing my 
+                        ability to tackle real-world security challenges. Passionate about safeguarding digital landscapes, I am dedicated to innovating 
+                        and implementing effective security solutions to protect against evolving cyber threats.</p>
+                </div>
 
-            <div class="skill-cardeven">
-                <h3>Network Security</h3>
-                <ul>
-                    <li>Firewall Configuration</li>
-                    <li>Network Troubleshooting</li>
-                    <li>Network Monitoring</li>
-                </ul>
-            </div>
+                <!-- skill set -->
+                <div class="skills" id="skills">
+                    <h1>Skills</h1>
+                </div>
 
-            <div class="skill-cardodd">
-                <h3>Software Development and Automation</h3>
-                <ul>
-                    <li>Python Programming</li>
-                    <li>App Development</li>
-                    <li>Web Development</li>
-                </ul>
-            </div>
+                <div class="grid">
+                    <div class="skill-cardeven">
+                        <h3>Penetration Testing</h3>
+                        <ul>
+                            <li>Red Team Operations</li>
+                            <li>Network Scanning</li>
+                            <li>Metasploit</li>
+                            <li>Password Cracking</li>
+                            <li>Active Directory Enumeration</li>
+                            <li>Web Application Security</li>
+                            <li>Pentest Report Writing</li>
+                        </ul>
+                    </div>
         
+                    <div class="skill-cardodd">
+                        <h3>Tools and Technologies</h3>
+                        <ul>
+                            <li>Wireshark</li>
+                            <li>Hydra and Patator</li>
+                            <li>Nmap</li>
+                            <li>Metasploit</li>
+                            <li>Burp Suite</li>
+                            <li>Microsoft Azure AD</li>
+                            <li>Ansible</li>
+                        </ul>
+                    </div>
+        
+                    <div class="skill-cardeven">
+                        <h3>Network Security</h3>
+                        <ul>
+                            <li>Firewall Configuration</li>
+                            <li>Network Troubleshooting</li>
+                            <li>Network Monitoring</li>
+                        </ul>
+                    </div>
+        
+                    <div class="skill-cardodd">
+                        <h3>Software Development and Automation</h3>
+                        <ul>
+                            <li>Python Programming</li>
+                            <li>App Development</li>
+                            <li>Web Development</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer" id="footer">
+                    <ul class="connect">
+                        <li><a href="https://www.linkedin.com/in/rayhan-baig/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/Rayhan2525" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        
-        <footer class="footer">
-            <ul class="connect">
-                <li><a href="https://www.linkedin.com/in/rayhan-baig/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/Rayhan2525" target="_blank">GitHub</a></li>
-            </ul>
-        </footer>
 
-        <!-- <script>
-            // Remove the hash from the URL on page load
-            window.addEventListener('load', function() {
-                if (window.location.hash) {
-                    window.history.replaceState(null, null, window.location.pathname);
-                    window.scrollTo(0, 0);
-                }
-            });
-    
-            // Add smooth scroll to the links
-            document.querySelectorAll('nav ul li a').forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        </script> -->
+        <!-- script for page refresh -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            // Check if the URL has a hash fragment
+            if (window.location.hash) {
+                // Store the current scroll position
+                const currentScrollPosition = window.pageYOffset;
 
+                // Scroll to the top of the page
+                window.scrollTo(0, 0);
+
+                // Wait for a short duration and then scroll to the stored position
+                setTimeout(function() {
+                    window.scrollTo(0, currentScrollPosition);
+                }, 1);
+            }
+            });
+        </script>
+
+        <!-- moving text animation -->
         <script>
             function sleep(ms) {
                 return new Promise((resolve) => setTimeout(resolve, ms));
