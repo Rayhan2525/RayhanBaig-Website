@@ -1,18 +1,24 @@
 /*  ******************************************************
     BASE
     ******************************************************  */
-
+    
+*{
+    background-color:  #ece8e0;
+}    
+.section{
+    background-color: black;
+}
 #main{
     display:flex;
     flex-direction: column;
     overflow: hidden;
     height: 100vh;
+    background-color: black;
 }
 header{
     background-image: url(../images/copy4.jpg);
     background-repeat: no-repeat;
     background-position: 78%;
-    /* background-attachment: fixed; */
     background-size:cover;
     border-image: linear-gradient(hsla(0, 0%, 0%, 0.3), hsla(120, 79%, 64%, 0.3)) fill 1;
     flex-grow:1;
@@ -20,27 +26,54 @@ header{
 }
 
 .navbar{
-    border-bottom: 2px solid green;
+    display: flex;
+    padding: 5px;
+    justify-content: space-evenly;
+    border-bottom: 3px solid green;
+    align-items: center;
 }
 
-.navbar ul{
+.navmenu{
     display:flex;
+    gap: 60px;
     justify-content: space-evenly;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .navbar ul li{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     font-family: "Inter",sans-serif;
     list-style-type: none;
 }
 
 .navbarLinks{
     text-decoration: none;
-    color: green;
+    color: black;
 }
+
+.hamburger{
+    display:none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width:25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: green;
+}
+
+.mainName,.mainName h1,.movingTextContainer,
+.movingTextContainer h3, .movingTextContainer h3 span,
+.introContainer,.introContainer p{
+    background-color: unset;
+}
+
 #main .mainName, #main .movingTextContainer, #main .introContainer{
     padding-left: 10%;
     padding-right: 10%;
@@ -85,6 +118,10 @@ header{
     }
 }
 
+#mainAboutme{
+    background-color:#ece8e0;
+}
+
 .aboutme{
     padding-top: 3%;
     padding-left: 10%;
@@ -93,10 +130,12 @@ header{
 }
 
 .aboutme h1{
+    color: green;
     font-family: "Inter", sans-serif;
     border-bottom: 2px solid green;
 }
 .aboutmepara{
+    color: black;
     padding-top: 2%;
     font-family: "Inter",sans-serif;
     line-height: 1.4em;
@@ -104,6 +143,8 @@ header{
 }
 
 .skills{
+    color: green;
+    background-color: #ece8e0;
     padding-top: 3%;
     padding-left: 10%;
     padding-right: 10%;
@@ -114,6 +155,7 @@ header{
 }
 
 .grid {
+    background-color: #ece8e0;
     margin-top: 2%;
     padding: 16px;
     padding-bottom: 16px;
@@ -131,11 +173,11 @@ header{
 }
 
 .skill-cardeven, .skill-cardodd{
-    background-color: white;
+    background-color:#ece8e0;
 }
 
 .skill-cardeven *, .skill-cardodd *{
-    background-color: white;
+    background-color:#ece8e0;
     color: green;
 }
 
@@ -212,14 +254,17 @@ body, html {
         font-size: 5vw;
     }
     .movingtext{
-        font-size: 3vw;
+        font-size: 4vw;
     }
     #typewriter{
-        font-size: 3vw;
+        font-size: 5vw;
     }
     
     #cursor{
-        font-size: 3vw;
+        font-size: 5vw;
+    }
+    .intropara{
+        font-size: 4vh;
     }
 }
 
@@ -238,22 +283,52 @@ body, html {
 /* change display for navbar */
 @media (max-width: 700px){
     .mainName{
-        font-size: 7vw;
+        font-size: 6vw;
     }
-    .navbar ul{
-        margin-top: 5px;
-        margin-bottom: 5px;
-        display: block;
-        padding: 5px;
+    .navbar{
         padding-left: 10px;
+        justify-content:flex-start;
+        align-items: center;
     }
     .navbar ul li{
         font-size: 18px;
         padding-top: 5px;
         padding-bottom: 5px;
     }
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navmenu{
+        position: fixed;
+        left: -110%;
+        top:30px;
+        gap: 0;
+        flex-direction: column;
+        text-align: flex-start;
+        padding-left: 10px;
+        transition: 0.3s;
+        background-color:#ece8e0;
+        width: 100%;
+    }
+    .navmenu.active{
+        left:0;
+    }
 }
 
+@media (max-width: 580px){
+    .intropara{
+        font-size: 5vw;
+    }
+}
 /* adjust moving text and short para font */
 @media (max-width: 430px){
     #typewriter{
@@ -272,4 +347,3 @@ body, html {
         grid-template-columns: 1fr 1fr;
     }
 }
-
